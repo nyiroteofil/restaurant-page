@@ -7,7 +7,7 @@ module.exports = {
     devtool: 'inline-source-map',
     entry: "./src/app.js",
     output: {
-        filename: '[name].restaurant.js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
