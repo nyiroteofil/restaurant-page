@@ -5,10 +5,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
-    entry: "./src/app.js",
+    entry: {
+       "app": "./src/app.js",
+    },
     output: {
-        filename: '[name].js',
+        filename: '[name].restaurant.js',
         path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename: 'assets/[name].[ext]',
         clean: true,
     },
     devServer: {

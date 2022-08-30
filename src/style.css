@@ -1,5 +1,158 @@
-p {
-    text-align: center;
-    font-size: 10em;
-    color: grey;
+
+
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.content {
+    display: grid;
+    grid-template: repeat(10, 1fr) / 1fr;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.content-body {
+    grid-row-start: 4;
+    grid-row-end: 11;
+    margin: 0;
+    background-image: url(./imgs/cdoncel-Uh-Sv6YSzns-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.content-body::-webkit-scrollbar {
+    display: none;
+}
+
+.card-0, .card-2 {
+    display: block;
+    height: 500px;
+    width: 700px;
+    margin: 20px auto;
+    position: relative;
+    right: 180px;
+    box-shadow: 20px 10px 15px #000000af;
+}
+
+.card-1, .card-3 {
+    display: block;
+    height: 500px;
+    width: 700px;
+    margin: 10px auto;
+    position: relative;
+    left: 180px;
+    box-shadow: 20px 10px 8px #000000af
+}
+
+/*Images
+  for the cards on the main page
+*/
+
+.card-0 {
+    background-image: url(./imgs/shawnanggg-nmpW_WwwVSc-unsplash.jpg);
+    background-position: center;
+    background-size: contain;
+}
+
+.card-1 {
+    background-image: url(./imgs/patrick-tomasso-GXXYkSwndP4-unsplash.jpg);
+    background-position: center;
+    background-size: contain;
+}
+
+.card-2 {
+    background-image: url(./imgs/sebastian-coman-photography-eBmyH7oO5wY-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.card-3 {
+    background-image: url(./imgs/sven-mieke-7Khwr4mkhNQ-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/*fix header and navbar*/
+
+.content-header {
+    background-image: url(./imgs/erol-ahmed-IHL-Jbawvvo-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+
+    box-shadow: 0px 10px 15px 5px black;
+    height: 100%;
+    z-index: 1;
+
+    grid-row-start: 1;
+    grid-row-end: 4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.logo-container {
+    width: 500px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    font-size: 4em;
+    color: rgb(67, 207, 184);
+}
+
+.navbar {
+    position: relative;
+    top: 63px;;
+
+    height: 40px;
+    width: 100%;
+    background-color: rgba(212, 230, 116, 0.719);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tab {
+    display: flex;
+    align-items: top;
+    justify-content: center;
+
+    transition: transform 200ms linear;
+
+    height:30px;
+    width: 60px;
+
+    background-color: rgb(190, 111, 20);
+
+    border: 3px solid  rgb(189, 53, 18);
+    border-radius: 10px;
+}
+
+.tab.current {
+    background-color: rgb(67, 207, 184);
+    transform: translateY(-5px);
+
+    height: 48px;
+}
+
+.logo {
+    width: 150px;;
 }
