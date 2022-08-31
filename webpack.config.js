@@ -22,7 +22,7 @@ module.exports = {
       },
     plugins: [
         new HtmlWebpackPlugin({
-          title: 'None',
+          title: 'Corinth Restaurant',
           template: './src/index.html',
         }),
       ],
