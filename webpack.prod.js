@@ -10,12 +10,13 @@ module.exports = {
     output: {
         filename: '[name].restaurant.js',
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'assets/[name].[ext]',
+        assetModuleFilename: 'assets/[name].asset[ext]',
         clean: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
-          title: 'None',
+          title: 'Corinth Restaurant',
+          favicon: "./src/imgs/favicon.ico",
           template: './src/index.html',
         }),
       ],
