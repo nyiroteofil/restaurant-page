@@ -1,4 +1,5 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 
 body {
     height: 100vh;
@@ -19,15 +20,24 @@ body {
     grid-row-start: 4;
     grid-row-end: 11;
     margin: 0;
-    background-image: url(./imgs/cdoncel-Uh-Sv6YSzns-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
     height: 100%;
     width: 100%;
     overflow: scroll;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+.content-body.home {
+    background-image: url(./imgs/cdoncel-Uh-Sv6YSzns-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.content-body.menu {
+    background-image: url(./imgs/yiqun-tang-3o7O_6fi7Qc-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .content-body::-webkit-scrollbar {
@@ -100,6 +110,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+    font-family: 'Poppins';
 }
 
 
@@ -126,8 +138,10 @@ body {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
+
+    padding-left: 20px;
 }
 
 .tab {
@@ -135,24 +149,116 @@ body {
     align-items: top;
     justify-content: center;
 
-    transition: transform 200ms linear;
+    transition: all 200ms linear;
 
     height:30px;
     width: 60px;
 
-    background-color: rgb(190, 111, 20);
+    background-color: rgb(236, 227, 140);
+    
+    border-radius: 5px 0 5px 0;
+    border: none;
 
-    border: 3px solid  rgb(189, 53, 18);
-    border-radius: 10px;
+    font-size: 20px;
 }
 
 .tab.current {
-    background-color: rgb(67, 207, 184);
-    transform: translateY(-5px);
+    background-color: rgb(41, 101, 170);
 
-    height: 48px;
+    height: 40px;
+    width: 70px;
 }
 
 .logo {
-    width: 150px;;
+    width: 150px;
+}
+
+.menu-container {
+    height: 90%;
+    width: 50%;
+
+    margin: 0 auto;
+    padding: 30px;
+
+    display: grid;
+    grid-template: repeat(5, 300px) / 1fr 1fr;
+    gap: 10px;
+}
+
+.desc {
+    background-color: rgba(41, 102, 172, 0.781);
+    height: 100%;
+    border-radius: 5px;;
+
+    font-family: 'Bree Serif';
+}
+
+.desc > h2 {
+    font-size: 40px;
+    text-align: center;
+    color: rgb(154, 221, 87);
+}
+
+.desc > ul {
+    font-size: 30px;
+    text-align: left;
+    color:rgb(20, 16, 83);
+    list-style-image: url(./imgs/food-svgrepo-com.svg);
+    list-style-position: inside;
+}
+
+/*Menu images*/
+
+.menu-img {
+    width: 450px;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+    -o-object-fit: cover;
+    -o-object-position: center;
+}
+
+/*Info page*/
+
+.info-container {
+    width: 600px;
+    height: 500px;
+
+    background-color: rgba(41, 102, 172, 0.781);
+    margin: auto auto;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.info-container > h1 {
+    font-size: 40px;
+    font-family: 'Poppins';
+    color:rgb(20, 16, 83);
+    text-align: center;
+}
+
+.info-container > p {
+    font-size: 25px;
+    font-family: 'Bree serif';
+}
+
+.credit {
+    position: relative;
+    left: 470px;
+    
+    font-size: 30px;
+}
+
+.credit > a {
+    font-size: 30px;
+    text-decoration: none;
+
+    color:rgb(67, 207, 184);
+
+    transition: all 150ms ease-in-out;
+}
+
+.credit > a:hover {
+    color:rgb(154, 221, 87);
 }

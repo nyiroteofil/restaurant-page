@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack serve --open",
-    "watch": "webpack --watch"
+    "start": "webpack serve --open --config ./webpack.config.js",
+    "watch": "webpack --watch",
+    "build-product": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",

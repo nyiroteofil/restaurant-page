@@ -35,9 +35,16 @@ const removeClass = (element, className) => {
     item.classList.remove(`${className}`);
 }
 
+const removeTabClass = () => {
+    removeClass('home-tab', 'current');
+    removeClass('menu-tab', 'current');
+    removeClass('info-tab', 'current')
+}
+
 export {
     createElement,
     removeAllChild,
     addClass,
-    removeClass
+    removeClass,
+    removeTabClass,
 }

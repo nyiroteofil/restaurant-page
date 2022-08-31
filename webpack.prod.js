@@ -3,23 +3,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
-    devtool: 'inline-source-map',
+    mode: 'production',
     entry: {
        "app": "./src/app.js",
     },
     output: {
         filename: '[name].restaurant.js',
         path: path.resolve(__dirname, 'dist'),
-        assetModuleFilename: 'assets/[name].asset[ext]',
+        assetModuleFilename: 'assets/[name].[ext]',
         clean: true,
     },
-    devServer: {
-        static: '/dist',
-    },
-    optimization: {
-        runtimeChunk: 'single',
-      },
     plugins: [
         new HtmlWebpackPlugin({
           title: 'None',
